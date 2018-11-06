@@ -10,6 +10,10 @@ sh buildForBrew.sh .
 cd ..
 export PATH=$PATH:./simutils/build/Build/Products/Release
 
+# iPhone 7 Plus (EEE8E6DB-D082-4422-B805-396FE416C22F) (Creating) (unavailable, runtime profile not found
+echo "Start an iPhone 7 Plus simulator running iOS 11.3"
+xcrun simctl boot EEE8E6DB-D082-4422-B805
+
 echo "Installing correct node version..."
 export HOMEBREW_NO_AUTO_UPDATE=1
 brew uninstall node@6
@@ -18,6 +22,10 @@ brew link node@8 --force --overwrite
 
 echo "Installing dependencies for detox tests..."
 npm install
+
+# iPhone X (847E06E5-BE8E-4CC2-AA7E-A7D48D6B2D57) 
+echo "Start an iPhone X simulator running iOS 11.3"
+xcrun simctl boot 847E06E5-BE8E-4CC2-AA7E-A7D48D6B2D57
 
 echo "Running 'xcrun simctl list' to list supported devices."
 xcrun simctl list
@@ -50,7 +58,13 @@ npx detox build --configuration ios.sim.release
 #
 #  1) "before all" hook:
 #     Error: Timeout of 120000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves.
-     
+
+echo "Sleep for 5 minutes..."
+sleep 300
+echo "...done sleeping for 5 minutes."
+
+echo "Re-Running 'xcrun simctl list' to list supported devices. What has booted?"
+xcrun simctl list
     
 echo "Executing Detox tests..."
 npx detox test --configuration ios.sim.release --cleanup
