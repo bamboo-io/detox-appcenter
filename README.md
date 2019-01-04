@@ -10,9 +10,11 @@ This sample project demonstrates running Detox tests prior to a regular MS [AppC
 
 ## Requirements
 
-* Make sure you have Xcode installed (tested with Xcode 9.4.1 and Xcode 10.1).
-* Make sure you have node installed (`brew install node` or via nvm etc, node 8.X and up is _required_)
-* Make sure you have react-native dependencies installed:
+Make sure you have installed:
+* Xcode (tested with Xcode 9.4.1 and Xcode 10.1)
+* xcpretty (`gem install xcpretty` - https://github.com/supermarin/xcpretty)
+* Node.js (`brew install node` or via nvm etc, node 8.X and up is _required_)
+* react-native dependencies:
    * watchman is installed (`brew install watchman`)
 
 ### Step 1: Install Dependancies
