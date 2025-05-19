@@ -12,7 +12,7 @@
     "react-native": "^0.56.0"
   },
   "devDependencies": {
-    "mocha": "^5.2.0",
+    "mocha": "^11.3.0",
     "detox": "9.0.4"
   },
   "detox": {
