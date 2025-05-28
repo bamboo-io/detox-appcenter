@@ -9,10 +9,10 @@
   },
   "dependencies": {
     "react": "16.4.1",
-    "react-native": "^0.56.0"
+    "react-native": "^0.56.1"
   },
   "devDependencies": {
-    "mocha": "^5.2.0",
+    "mocha": "^11.5.0",
     "detox": "9.0.4"
   },
   "detox": {
